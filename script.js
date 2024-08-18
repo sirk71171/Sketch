@@ -2,11 +2,11 @@ var container = document.querySelector("#container");
 const iput = document.querySelector("#iput");
 const select = document.querySelector("#select");
 let STAT = "not-clicked";
-
+const input = window.prompt("Enter a number between 1 and 100: ");
 
 document.addEventListener("DOMContentLoaded", () => {
     STAT = "clicked";
-    const input = prompt("Enter a number between 1 and 100: ");
+    
 
     for (i = 1; i <= input; i++) {
         const rows = document.createElement("div");
@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 })
-
-
 function assignToElement () {
     document.onmouseover = function(e) {
         val = e.target.id;
@@ -32,5 +30,15 @@ function assignToElement () {
         
     }
 }
-
 container.addEventListener("DOMContentLoaded", assignToElement());
+select.addEventListener("click", () => {
+    for (i = 1; i <= input; i++) {
+        boxElement = document.getElementById(`boxrow${i}`);
+        boxElement.remove;
+        for (j = 1; j <= input; j++) {
+            element = document.getElementById(`box${i}*${j}`);
+            element.remove;
+
+        }
+    }
+})
