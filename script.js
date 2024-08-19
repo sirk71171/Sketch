@@ -2,11 +2,11 @@ var container = document.querySelector("#container");
 const iput = document.querySelector("#iput");
 const select = document.querySelector("#select");
 let STAT = "not-clicked";
-let input = 0; 
-while (input <= 0 || input > 100) {
-    input = window.prompt("Enter a number between 1 and 100: ");
+let input = null; 
+while (input <= 0 || input > 100 || input == NaN || input == null) {
+        input = window.prompt("Enter a number between 1 and 100: ");
     }
-
+    
 document.addEventListener("DOMContentLoaded", () => {
     STAT = "clicked";
     
